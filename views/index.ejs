@@ -2,14 +2,14 @@
 <head>
   <meta charset="utf-8">
  <title>Survey Form</title>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css"> -->
 </head>
 <body>
   <div class="row">
-  <form class="col s12">
+  <form class="col s12" action='/users' method='post'>
     <div class="row">
       <div class="input-field col s6">
-        First Name: <input id="icon_prefix" type="text" class="validate">
+        First Name: <input name='name' id="icon_prefix" type="text" class="validate">
       </div>
   <div class="input-field col s12">
     Dojo Location:
@@ -30,10 +30,10 @@
       </select>
     </div>
       <div class="row">
-    <form class="col s6">
+    <form class="col s6" action='/users' method='post'>
       <div class="row">
         <div class="input-field col s6">
-          Comment Optional: <textarea id="textarea1" class="materialize-textarea"></textarea>
+          Comment Optional: <textarea name='comment' id="textarea1" class="materialize-textarea"></textarea>
         </div>
       </div>
     </form>

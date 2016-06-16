@@ -26,15 +26,15 @@ app.post('/users', function(req, res) {
   var comment = req.body.comment;
   var users = {name:name, location:location, languages:languages, comment:comment};
 
-
-
  console.log("POST DATA \n\n", req.body);
 
  // This is where we would add the user to the database
  // Then redirect to the root route
  res.render('dojoinfo', {users:users});
-
 })
+// app.get('/quotes', function(req, res) {
+//  res.render("quotes");
+// })
 // tell the express app to listen on port 8000
 app.listen(8000, function() {
  console.log("listening on port 8000");
