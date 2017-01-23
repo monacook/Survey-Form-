@@ -2,46 +2,69 @@
 <head>
   <meta charset="utf-8">
  <title>Survey Form</title>
-<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css"> -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .picture {
+      background-image: url('../img/header.jpg');
+      background-size: cover;
+      min-height: auto;
+      width: 100%;
+      height: 100%;
+  }
+  h1  {
+      color: white;
+  }
+  </style>
 </head>
 <body>
-  <div class="row">
+<div class="picture">
+<div class="container-fluid bg-2 text-center">
   <form class="col s12" action='/users' method='post'>
     <div class="row">
       <div class="input-field col s6">
-        First Name: <input name='name' id="icon_prefix" type="text" class="validate">
+          <div class="header" style="color:white;">
+          <h1>MobileDevs Survey</h1>
+        First Name <br>
+        <input name='name' id="icon_prefix" type="text" class="validate" style="color:black;" >
       </div>
-  <div class="input-field col s12">
-    Dojo Location:
-    <select name="location">
-      <option value="Mountain View">Mountain View</option>
-      <option value="Seattle">Seattle</option>
-      <option value="Chicago">Chicago</option>
-      <option value="Los Angeles">Los Angeles</option>
-      <option value="Dallas">Dallas</option>
+</div>
+  <div class="input-field col s12" style="color:white;">
+    What year are you? <br>
+    <select name="location" style="color:black;">
+      <option value="Mountain View">Freshman</option>
+      <option value="Seattle">Sophomore</option>
+      <option value="Chicago">Junior</option>
+      <option value="Los Angeles">Senior</option>
+      <option value="Dallas">Graduate</option>
     </select>
    </div>
-    <div class="input-field col s12">
-      Favorite Languages:
-      <select name="languages">
-        <option value="Javascript">Javascript</option>
-        <option value="Swift">Swift</option>
-        <option value="HTML">HTML</option>
+
+    <div class="input-field col s12" style="color:white;">
+      IOS or Android?<br>
+      <select name="languages" style="color:black;">
+        <option value="Javascript">Android</option>
+        <option value="Swift">IOS</option>
       </select>
     </div>
-      <div class="row">
+
+     <div class="row">
     <form class="col s6" action='/users' method='post'>
       <div class="row">
-        <div class="input-field col s6">
-          Comment Optional: <textarea name='comment' id="textarea1" class="materialize-textarea"></textarea>
+        <div class="input-field col s6" style="color:white;">
+          Why are you interested in mobile? <br>
+          <textarea name='comment' id="textarea1" class="materialize-textarea" style="margin: 0px; width: 311px; height: 80px; color: black"></textarea>
         </div>
       </div>
     </form>
   </div>
+  <br>
       <button class="btn waves-effect waves-light" type="submit" name="action">Submit
         </button>
   </form>
   </div>
-</div>
+  </div>
+  </div>
 </body>
 </html>

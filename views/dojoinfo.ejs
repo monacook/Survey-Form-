@@ -1,13 +1,30 @@
 <html>
 <meta charset="utf-8">
-<title>Submitted Information</title>
+<title>Information submitted</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <style>
+ .picture {
+     background-image: url('../img/header.jpg');
+     background-size: cover;
+     min-height: auto;
+     width: 100%;
+     height: 100%;
+ }
+ h1  {
+     color: white;
+ }
+ </style>
 <head>
-  <h2>Submitted Information</h2>
-
+    <div class="picture">
+    <div class="container-fluid bg-2 text-center" style="color:white;">
+  <h2>Welcome <%= users.name %></h2>
   <p>Name: <%= users.name %></p>
-  <p>Dojo Location: <%= users.location %></p>
+  <p>Year: <%= users.location %></p>
   <p>Favorite Language: <%= users.languages %></p>
   <p>Comment: <%= users.comment %></p>
+     </div>
 <head>
 <body>
 </body>
